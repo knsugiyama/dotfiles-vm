@@ -1,0 +1,41 @@
+# https://starship.rs/ja-JP/
+# エディターの補完を設定スキーマに合わせて取得
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# シェルのプロンプトの間に空行を挿入する
+add_newline = true
+
+[directory]
+format = "[$path]($style) "
+truncation_length = 8
+truncation_symbol = "..."
+truncate_to_repo = false
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+format = '[($all_status$ahead_behind)]($style)'
+
+[nodejs]
+symbol = ""
+format = '[[ $symbol ($version) ]]($style)'
+detect_extensions = ["js", "mjs", "cjs", "ts", "mts", "cts"]
+detect_files = ["package.json", ".node-version", "!bunfig.toml", "!bun.lockb"]
+detect_folders = ["node_modules"]
+
+[rust]
+symbol = ""
+format = '[[ $symbol ($version) ]]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'

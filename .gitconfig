@@ -1,0 +1,28 @@
+[core]
+  quotepath = false
+  excludesfile = ~/.gitignore_global
+  preloadindex = true
+  autocrlf = false
+  filemode = false
+  editor = vim -c \"set fenc=utf-8\"
+[color]
+  ui = auto
+[help]
+  autocorrect = 1
+[push]
+  default = simple
+[ghq "CODECOMMIT-URL"]
+  vcs = git
+[fetch]
+  prune = true
+[ghq]
+  root = ~/src
+[user]
+  email = knsugiyama15@gmail.com
+  name = knsugiyama15
+[pull]
+  rebase = false
+[hub]
+  protocol = https
+[include]
+    path = ~/.dotfiles/.gitconfig_credential
