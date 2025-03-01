@@ -16,3 +16,5 @@ fi
 sudo apt -y update
 sudo apt -y upgrade
 sudo apt autoremove
+
+nix-channel --update nixpkgs
