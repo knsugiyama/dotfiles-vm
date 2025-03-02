@@ -19,11 +19,6 @@ deploy: ## Create symlink to home directory
 
 install: ## Install apps.
 	@git update-index --assume-unchanged ${HOME}/.dotfiles/.gitconfig_credential
-	@which zsh > /dev/null 2>&1; \
-	if [ $$? -eq 0 ]; then \
-		sudo sh -c "echo `which zsh` >> /etc/shells"; \
-		chsh -s `which zsh`; \
-	fi
 
 update: ## Fetch changes for this repository
 	@echo 'Fetch changes for this repository.'

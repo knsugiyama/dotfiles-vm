@@ -9,12 +9,6 @@ else
   git pull
 fi
 
-if sheldon --help &>/dev/null; then
-  sheldon lock --update
-fi
-
 sudo apt -y update
 sudo apt -y upgrade
 sudo apt autoremove
-
-nix-channel --update nixpkgs
